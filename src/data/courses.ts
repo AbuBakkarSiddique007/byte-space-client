@@ -1,0 +1,118 @@
+import type { Course } from "@/types";
+
+export const courses: Course[] = [
+  {
+    id: "learn-figma-basic",
+    title: "Learn Figma from Basic",
+    author: {
+      name: "purepearl studio",
+      role: "Designer"
+    },
+    lessonsCount: 17,
+    duration: "2 hours 16 mins",
+    commentsCount: 59,
+    rating: 4.5,
+    level: "Beginner",
+    price: 25,
+    billingType: "lifetime",
+    enrolledAvatars: ["/assets/avatars/av1.png", "/assets/avatars/av2.png", "/assets/avatars/av3.png"],
+    enrolledCountBadge: "26+",
+    category: "ui-ux-design",
+    imageThumbnail: "/assets/course-figma.png",
+  },
+  {
+    id: "build-digital-asset",
+    title: "Build Digital Asset",
+    author: {
+      name: "purepearl studio",
+      role: "Designer"
+    },
+    lessonsCount: 12,
+    duration: "1 hour 45 mins",
+    commentsCount: 34,
+    rating: 4.5,
+    level: "Beginner",
+    price: 25,
+    billingType: "lifetime",
+    enrolledAvatars: ["/assets/avatars/av1.png", "/assets/avatars/av2.png", "/assets/avatars/av3.png"],
+    enrolledCountBadge: "18+",
+    category: "graphic-design",
+    imageThumbnail: "/assets/course-digital-asset.png",
+  },
+  {
+    id: "power-of-big-data",
+    title: "The Power of Big Data",
+    author: {
+      name: "purepearl studio",
+      role: "Analyst"
+    },
+    lessonsCount: 20,
+    duration: "3 hours 10 mins",
+    commentsCount: 47,
+    rating: 4.5,
+    level: "Intermediate",
+    price: 25,
+    billingType: "lifetime",
+    enrolledAvatars: ["/assets/avatars/av1.png", "/assets/avatars/av2.png", "/assets/avatars/av3.png"],
+    enrolledCountBadge: "31+",
+    category: "data-science",
+    imageThumbnail: "/assets/course-big-data.png",
+  },
+  {
+    id: "balancing-productivity",
+    title: "Balancing Productivity and Wellness",
+    author: {
+      name: "purepearl studio",
+      role: "Coach"
+    },
+    lessonsCount: 10,
+    duration: "1 hour 30 mins",
+    commentsCount: 22,
+    rating: 4.5,
+    level: "Beginner",
+    price: 25,
+    billingType: "lifetime",
+    enrolledAvatars: ["/assets/avatars/av1.png", "/assets/avatars/av2.png", "/assets/avatars/av3.png"],
+    enrolledCountBadge: "14+",
+    category: "productivity",
+    imageThumbnail: "/assets/course-productivity.png",
+  },
+  {
+    id: "mastering-money",
+    title: "Mastering Money Management",
+    author: {
+      name: "purepearl studio",
+      role: "Finance Expert"
+    },
+    lessonsCount: 15,
+    duration: "2 hours 05 mins",
+    commentsCount: 38,
+    rating: 4.5,
+    level: "Intermediate",
+    price: 25,
+    billingType: "lifetime",
+    enrolledAvatars: ["/assets/avatars/av1.png", "/assets/avatars/av2.png", "/assets/avatars/av3.png"],
+    enrolledCountBadge: "22+",
+    category: "marketing",
+    imageThumbnail: "/assets/course-money.png",
+  },
+  {
+    id: "idea-to-startup",
+    title: "From Idea to Startup Success",
+    author: {
+      name: "purepearl studio",
+      role: "Entrepreneur"
+    },
+    lessonsCount: 18,
+    duration: "2 hours 50 mins",
+    commentsCount: 55,
+    rating: 4.5,
+    level: "Intermediate",
+    price: 25,
+    billingType: "lifetime",
+    enrolledAvatars: ["/assets/avatars/av1.png", "/assets/avatars/av2.png", "/assets/avatars/av3.png"],
+    enrolledCountBadge: "29+",
+    category: "freelance",
+    imageThumbnail: "/assets/course-startup.png",
+  },
+];
