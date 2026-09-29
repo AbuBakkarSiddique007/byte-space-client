@@ -20,12 +20,36 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Subtle blueprint grid for Hero & CTA */
 .bg-grid-pattern {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   background-size: 80px 80px;
 }
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float 4s ease-in-out infinite 1s;
+}
+
+.animate-float-fast {
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
 
 @theme inline {
   --font-heading: var(--font-sans);
@@ -143,9 +167,11 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
