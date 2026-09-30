@@ -7,7 +7,7 @@ import type {
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Courses", href: "#courses" },
+  { label: "Courses", href: "/courses" },
   { label: "Creators", href: "#creators" },
 ];
 
