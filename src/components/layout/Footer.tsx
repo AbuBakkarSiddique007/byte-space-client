@@ -14,8 +14,8 @@ export function Footer() {
               <Image
                 src="/assets/byteSpaceLogo.svg"
                 alt="ByteSpace logo mark"
-                width={30}
-                height={34}
+                width={29}
+                height={32}
               />
               <span className="text-2xl font-bold tracking-tight text-dark-heading">
                 ByteSpace

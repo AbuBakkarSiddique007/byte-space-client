@@ -13,8 +13,8 @@ export function Navbar() {
             <Image
               src="/assets/byteSpaceLogo.svg"
               alt="ByteSpace logo mark"
-              width={30}
-              height={34}
+              width={29}
+              height={32}
               priority
             />
             <span className="text-2xl font-bold tracking-tight text-white">

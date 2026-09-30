@@ -19,12 +19,7 @@ const getInitials = (name: string) =>
 
 export function TestimonialsSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-20 sm:py-28">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 top-24 h-[420px] w-[420px] rounded-full bg-accent-lime/25 blur-3xl"
-      />
-
+    <section className="bg-feature-wash relative w-full overflow-hidden py-20 sm:py-28">
       <Container>
         <div className="relative grid gap-6 lg:grid-cols-2 lg:gap-16">
           <h2 className="text-3xl font-bold leading-[1.2] tracking-tight text-dark-heading sm:text-4xl lg:text-[42px]">

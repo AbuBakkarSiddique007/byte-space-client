@@ -4,7 +4,7 @@ import { growthFeature } from "@/data";
 
 export function GrowthFeature() {
   return (
-    <section className="w-full bg-white pt-20 pb-6 sm:pt-28 sm:pb-8">
+    <section className="bg-feature-wash w-full pt-20 pb-6 sm:pt-28 sm:pb-8">
       <div className="mx-auto w-full max-w-[1322px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-[63px] lg:grid-cols-[574px_621px] lg:justify-center">
           <div className="flex flex-col gap-10 lg:self-center">
