@@ -18,7 +18,7 @@ export function CtaBanner() {
             alt=""
             width={1440}
             height={804}
-            className="mx-auto h-auto w-[1440px] max-w-none"
+            className="mx-auto h-auto w-[900px] max-w-none sm:w-[1200px] lg:w-[1440px]"
             priority={false}
           />
         </div>

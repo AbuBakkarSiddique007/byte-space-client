@@ -6,7 +6,7 @@ export function GrowthFeature() {
   return (
     <section className="bg-feature-wash w-full pt-20 pb-6 sm:pt-28 sm:pb-8">
       <div className="mx-auto w-full max-w-[1322px] px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-[63px] lg:grid-cols-[574px_621px] lg:justify-center">
+        <div className="grid items-center gap-12 xl:grid-cols-[574px_621px] xl:justify-center xl:gap-[63px]">
           <div className="flex flex-col gap-10 lg:self-center">
             <h2 className="text-3xl font-bold leading-[1.2] tracking-tight text-dark-heading sm:text-4xl lg:text-[42px]">
               {growthFeature.headline}
@@ -26,13 +26,13 @@ export function GrowthFeature() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center lg:h-[552px]">
+          <div className="flex items-center justify-center xl:h-[552px]">
             <Image
               src={growthFeature.image}
               alt={growthFeature.imageAlt}
               width={703}
               height={697}
-              className="h-auto w-full max-w-[621px] object-contain lg:max-h-full"
+              className="h-auto w-full max-w-[621px] object-contain xl:max-h-full"
               priority={false}
             />
           </div>

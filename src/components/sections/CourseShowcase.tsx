@@ -30,7 +30,7 @@ export function CourseShowcase() {
     categories.find((item) => item.id === activeCategory)?.name ?? "Featured";
 
   return (
-    <section className="w-full py-20 sm:py-28 bg-white">
+    <section className="w-full bg-white py-14 sm:py-20 lg:py-28">
       <Container>
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-dark-heading leading-[1.2] tracking-tight">
@@ -43,11 +43,11 @@ export function CourseShowcase() {
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-3">
+        <div className="mt-8 flex flex-col items-center gap-2 sm:mt-12 sm:gap-3">
           {rows.map((row, index) => (
             <div
               key={index}
-              className="flex flex-wrap justify-center gap-2.5"
+              className="flex flex-wrap justify-center gap-2"
               role="group"
               aria-label={`Category filters row ${index + 1}`}
             >
@@ -66,13 +66,13 @@ export function CourseShowcase() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs font-medium text-muted-body">
+        <p className="mt-6 text-center text-xs font-medium text-muted-body sm:mt-8">
           Showing {visibleCourses.length}{" "}
           {visibleCourses.length === 1 ? "course" : "courses"} in {activeName}
         </p>
 
         {visibleCourses.length > 0 ? (
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid gap-4 sm:mt-6 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {visibleCourses.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}

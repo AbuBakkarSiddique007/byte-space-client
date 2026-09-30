@@ -8,7 +8,7 @@ export function CreatorFeature() {
     <section className="bg-feature-wash w-full pt-6 pb-20 sm:pt-8 sm:pb-28">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="order-2 flex justify-center lg:order-1 lg:justify-start">
+          <div className="order-2 flex justify-center xl:order-1 xl:justify-start">
             <Image
               src={creatorFeature.image}
               alt={creatorFeature.imageAlt}
@@ -19,7 +19,7 @@ export function CreatorFeature() {
             />
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-1 xl:order-2">
             <h2 className="text-3xl font-bold leading-[1.2] tracking-tight text-dark-heading sm:text-4xl lg:text-[42px]">
               {creatorFeature.headline}
             </h2>

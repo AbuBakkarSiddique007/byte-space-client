@@ -23,7 +23,7 @@ const pathIcons: Record<LearningPath["iconName"], LucideIcon> = {
 
 export function LearningPaths() {
   return (
-    <section className="w-full bg-white py-20 sm:py-28">
+    <section className="w-full bg-white py-14 sm:py-20 lg:py-28">
       <Container>
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-dark-heading leading-[1.2] tracking-tight">
@@ -37,7 +37,7 @@ export function LearningPaths() {
           </p>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-10">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-14 sm:gap-5 lg:gap-10">
           {learningPaths.map((path) => {
             const Icon = pathIcons[path.iconName];
 
@@ -45,7 +45,7 @@ export function LearningPaths() {
               <Link
                 key={path.id}
                 href={path.href}
-                className="group flex h-[167px] w-[167px] shrink-0 flex-col items-center justify-center gap-2 rounded-3xl border border-border-subtle bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-lime hover:shadow-xl"
+                className="group flex h-[132px] w-[calc(50%-0.375rem)] max-w-[167px] shrink-0 flex-col items-center justify-center gap-2 rounded-2xl border border-border-subtle bg-white p-4 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-lime hover:shadow-xl sm:h-[150px] sm:w-[150px] sm:p-5 lg:h-[167px] lg:w-[167px] lg:rounded-3xl lg:p-6"
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-accent-lime text-dark-heading transition-transform duration-300 group-hover:scale-110">
                   <Icon className="h-6 w-6" />
