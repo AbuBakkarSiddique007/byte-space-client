@@ -11,3 +11,4 @@ export { testimonials } from "./testimonials";
 export { partners } from "./partners";
 export { growthFeature } from "./growth";
 export { creatorFeature } from "./creator";
+export { ctaBanner } from "./cta";

@@ -6,6 +6,7 @@ import { CourseShowcase } from "@/components/sections/CourseShowcase";
 import { LearningPaths } from "@/components/sections/LearningPaths";
 import { GrowthFeature } from "@/components/sections/GrowthFeature";
 import { CreatorFeature } from "@/components/sections/CreatorFeature";
+import { CtaBanner } from "@/components/sections/CtaBanner";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <LearningPaths />
       <GrowthFeature />
       <CreatorFeature />
+      <CtaBanner />
       <TestimonialsSection />
       <Footer />
     </main>
