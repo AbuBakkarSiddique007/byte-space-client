@@ -17,8 +17,8 @@ export interface Course {
   level: CourseLevel;
   price: number;
   billingType: "lifetime" | "monthly" | "yearly";
-  enrolledAvatars: string[];
+  enrolledAvatars?: string[];
   enrolledCountBadge: string;
   category: string;
-  imageThumbnail: string;
+  imageThumbnail?: string;
 }
