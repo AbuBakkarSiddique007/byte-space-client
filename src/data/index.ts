@@ -9,3 +9,5 @@ export { courses } from "./courses";
 export { learningPaths } from "./learningPaths";
 export { testimonials } from "./testimonials";
 export { partners } from "./partners";
+export { growthFeature } from "./growth";
+export { creatorFeature } from "./creator";

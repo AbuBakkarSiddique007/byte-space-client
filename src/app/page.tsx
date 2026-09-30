@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { PartnerLogos } from "@/components/sections/PartnerLogos";
 import { CourseShowcase } from "@/components/sections/CourseShowcase";
 import { LearningPaths } from "@/components/sections/LearningPaths";
+import { GrowthFeature } from "@/components/sections/GrowthFeature";
+import { CreatorFeature } from "@/components/sections/CreatorFeature";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
       <PartnerLogos />
       <CourseShowcase />
       <LearningPaths />
+      <GrowthFeature />
+      <CreatorFeature />
       <TestimonialsSection />
       <Footer />
     </main>
