@@ -4,3 +4,4 @@ export type { NavLink, NavCTA, FooterColumn, FooterNewsletter, FooterBottom } fr
 export type { Testimonial } from "./testimonial";
 export type { Partner } from "./partner";
 export type { SplitStat, SplitFeature, CreatorFeature } from "./split-feature";
+export type { CtaBanner } from "./cta";

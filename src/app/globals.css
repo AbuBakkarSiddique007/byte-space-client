@@ -7,6 +7,7 @@
 @theme {
   --color-primary-blue: #004BFE;
   --color-primary-blue-hover: #003ECC;
+  --color-cta-blue: #003BE2;
   --color-accent-lime: #CBFE00;
   --color-accent-lime-hover: #B8E600;
   --color-dark-heading: #0B0F19;
@@ -21,8 +22,8 @@ body {
 }
 
 .bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
   background-size: 80px 80px;
 }
 
