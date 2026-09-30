@@ -3,16 +3,8 @@ import { Search } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-[1024px] bg-[#003BE2] overflow-hidden flex flex-col items-center select-none">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.12) 1px, transparent 1px)",
-          backgroundSize: "120px 120px",
-          backgroundPosition: "center top",
-        }}
-      />
+    <section className="relative flex min-h-[720px] w-full select-none flex-col items-center overflow-hidden bg-primary-blue sm:min-h-[820px] lg:h-[1024px]">
+      <div className="bg-grid-pattern pointer-events-none absolute inset-0" />
 
       <div className="absolute top-[220px] left-1/2 -translate-x-1/2 w-[1440px] h-[804px] pointer-events-none z-10 animate-float-slow">
         <Image
@@ -21,6 +13,8 @@ export function HeroSection() {
           fill
           className="object-contain"
           priority
+          loading="eager"
+          sizes="1440px"
         />
       </div>
 
@@ -60,11 +54,11 @@ export function HeroSection() {
           alt="Student with headphones and laptop"
           fill
           className="object-contain object-bottom"
-          priority
+          sizes="722px"
         />
       </div>
 
-      <div className="absolute left-[calc(50%-316px)] top-[639px] z-20 animate-float-medium">
+      <div className="absolute left-[calc(50%-316px)] top-[639px] z-20 hidden animate-float-medium sm:block">
         <div className="bg-white rounded-2xl px-5 py-4 shadow-xl border border-white/60">
           <p className="text-base font-bold text-dark-heading leading-tight">UI/UX Design</p>
           <p className="text-xs text-muted-body mt-1 font-normal whitespace-nowrap">
@@ -73,7 +67,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute left-[calc(50%+122px)] top-[651px] z-20 animate-float-slow">
+      <div className="absolute left-[calc(50%+122px)] top-[651px] z-20 hidden animate-float-slow sm:block">
         <div className="bg-white rounded-2xl p-5 shadow-xl min-w-[220px] border border-white/60">
           <p className="text-xs font-semibold text-muted-body">Learning Progress</p>
           <p className="text-4xl font-extrabold text-dark-heading mt-1 leading-none tracking-tight">55%</p>
@@ -82,8 +76,8 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-
-      <div className="absolute left-[calc(50%-440px)] top-[815px] z-20 animate-float-fast">
+ 
+      <div className="absolute left-[calc(50%-440px)] top-[815px] z-20 hidden animate-float-fast sm:block">
         <div className="bg-white rounded-2xl p-4 shadow-xl border border-white/60">
           <Image
             src="/assets/badge-happy-students.png"
@@ -91,7 +85,6 @@ export function HeroSection() {
             width={230}
             height={108}
             className="w-[220px] h-auto object-contain"
-            priority
           />
         </div>
       </div>

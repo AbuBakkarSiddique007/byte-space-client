@@ -23,7 +23,7 @@ const pathIcons: Record<LearningPath["iconName"], LucideIcon> = {
 
 export function LearningPaths() {
   return (
-    <section className="w-full bg-surface-gray py-20 sm:py-28">
+    <section className="w-full bg-white py-20 sm:py-28">
       <Container>
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-dark-heading leading-[1.2] tracking-tight">

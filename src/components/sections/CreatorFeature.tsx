@@ -5,7 +5,7 @@ import { creatorFeature } from "@/data";
 
 export function CreatorFeature() {
   return (
-    <section className="w-full bg-white pt-6 pb-20 sm:pt-8 sm:pb-28">
+    <section className="bg-feature-wash w-full pt-6 pb-20 sm:pt-8 sm:pb-28">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="order-2 flex justify-center lg:order-1 lg:justify-start">

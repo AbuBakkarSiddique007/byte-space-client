@@ -27,6 +27,13 @@ body {
   background-size: 80px 80px;
 }
 
+.bg-feature-wash {
+  background:
+    radial-gradient(circle at 8% 30%, rgb(203 254 0 / 0.24), transparent 32%),
+    radial-gradient(circle at 92% 72%, rgb(0 75 254 / 0.16), transparent 38%),
+    #ffffff;
+}
+
 @keyframes float {
 
   0%,

@@ -5,7 +5,7 @@ import { ctaBanner } from "@/data";
 
 export function CtaBanner() {
   return (
-    <section className="relative w-full overflow-hidden bg-cta-blue">
+    <section className="relative w-full overflow-hidden bg-primary-blue">
       <div aria-hidden className="absolute inset-0 bg-grid-pattern" />
 
       <div
@@ -26,10 +26,10 @@ export function CtaBanner() {
 
       <Container>
         <div className="relative flex flex-col items-center py-20 text-center sm:py-24">
-          <h2 className="max-w-3xl text-3xl font-bold leading-[1.2] tracking-tight text-[#F1F2F7] sm:text-4xl lg:text-[42px]">
+          <h2 className="max-w-3xl text-3xl font-bold leading-[1.2] tracking-tight text-white sm:text-4xl lg:text-[42px]">
             {ctaBanner.headline}
           </h2>
-          <p className="mt-6 max-w-2xl text-sm leading-[1.7] text-[#F1F2F7]/80 sm:text-base">
+          <p className="mt-6 max-w-2xl text-sm leading-[1.7] text-white/80 sm:text-base">
             {ctaBanner.description}
           </p>
 
