@@ -3,6 +3,7 @@ import type { Testimonial } from "@/types";
 export const testimonials: Testimonial[] = [
   {
     id: "sarah-m",
+    avatarUrl: "/assets/testimonials-img-one.png",
     name: "Sarah M.",
     role: "Enthusiastic Learner",
     rating: 5,
@@ -11,6 +12,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "james-l",
+    avatarUrl: "/assets/testimonials-img-two.png",
     name: "James L.",
     role: "Lifelong Learner",
     rating: 5,
@@ -19,6 +21,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "alex-b",
+    avatarUrl: "/assets/testimonials-img-three.png",
     name: "Alex B.",
     role: "Inspired Creator",
     rating: 5,
