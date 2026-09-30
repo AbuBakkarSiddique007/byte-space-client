@@ -1,4 +1,9 @@
-export { navLinks, footerColumns } from "./navigation";
+export {
+  navLinks,
+  footerColumns,
+  footerNewsletter,
+  footerBottom,
+} from "./navigation";
 export { categories } from "./categories";
 export { courses } from "./courses";
 export { learningPaths } from "./learningPaths";
