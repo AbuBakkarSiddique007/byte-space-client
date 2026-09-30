@@ -6,7 +6,7 @@ export function HeroSection() {
     <section className="relative flex min-h-[720px] w-full select-none flex-col items-center overflow-hidden bg-primary-blue sm:min-h-[820px] lg:h-[1024px]">
       <div className="bg-grid-pattern pointer-events-none absolute inset-0" />
 
-      <div className="absolute top-[220px] left-1/2 -translate-x-1/2 w-[1440px] h-[804px] pointer-events-none z-10 animate-float-slow">
+      <div className="pointer-events-none absolute top-[230px] left-1/2 z-10 h-[520px] w-[930px] -translate-x-1/2 animate-float-slow sm:top-[220px] sm:h-[680px] sm:w-[1220px] lg:h-[804px] lg:w-[1440px]">
         <Image
           src="/assets/3d-ornament.png"
           alt=""
@@ -18,20 +18,20 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative z-20 flex flex-col items-center w-full max-w-[1440px] px-6 pt-[184px]">
-        <h1 className="text-5xl sm:text-6xl lg:text-[64px] font-bold text-white text-center leading-[1.08] tracking-tight">
+      <div className="relative z-20 flex w-full max-w-[1440px] flex-col items-center px-4 pt-32 sm:px-6 sm:pt-[184px]">
+        <h1 className="text-center text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-[64px]">
           Get Access to Hundreds
           <br />
           Courses Available
         </h1>
 
-        <p className="mt-8 text-white/80 text-sm sm:text-base text-center max-w-3xl font-normal tracking-normal">
+        <p className="mt-6 max-w-3xl text-center text-sm font-normal tracking-normal text-white/80 sm:mt-8 sm:text-base">
           Unlock your creativity, gain valuable knowledge, and grow your
           business with our wide range of courses.
         </p>
 
-        <div className="mt-14 flex items-center justify-center gap-3.5 w-full max-w-[560px] mx-auto">
-          <div className="flex items-center gap-3 bg-white rounded-full px-6 h-[46px] sm:h-[48px] flex-1 shadow-md">
+        <div className="mx-auto mt-10 flex w-full max-w-[560px] items-center justify-center gap-2 sm:mt-14 sm:gap-3.5">
+          <div className="flex h-[46px] min-w-0 flex-1 items-center gap-2 rounded-full bg-white px-4 shadow-md sm:h-[48px] sm:gap-3 sm:px-6">
             <Search className="w-4 h-4 text-gray-400 shrink-0" />
             <input
               type="text"
@@ -46,9 +46,9 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute top-[586px] left-1/2 -translate-x-1/2 w-[1116px] h-[1116px] rounded-full bg-accent-lime pointer-events-none z-0" />
+      <div className="pointer-events-none absolute top-[500px] left-1/2 z-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-accent-lime sm:top-[586px] sm:h-[950px] sm:w-[950px] lg:h-[1116px] lg:w-[1116px]" />
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[722px] h-[515px] pointer-events-none z-10">
+      <div className="pointer-events-none absolute bottom-0 left-1/2 z-10 h-[370px] w-[520px] -translate-x-1/2 sm:h-[465px] sm:w-[650px] lg:h-[515px] lg:w-[722px]">
         <Image
           src="/assets/hero-student.png"
           alt="Student with headphones and laptop"
@@ -76,7 +76,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
- 
+
       <div className="absolute left-[calc(50%-440px)] top-[815px] z-20 hidden animate-float-fast sm:block">
         <div className="bg-white rounded-2xl p-4 shadow-xl border border-white/60">
           <Image
