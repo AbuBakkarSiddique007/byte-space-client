@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace
+
+ByteSpace is a responsive front-end web application for an online learning and creator platform. It combines course discovery, creator profiles, learning paths, course details, reviews, and a polished landing page into one consistent user experience.
+
+## Implemented Features
+
+### Landing Page
+
+- Responsive hero section with course search, visual assets, learner badges, and grid background.
+- Partner logo strip with responsive marquee behavior.
+- Course showcase with category filtering and reusable course cards.
+- Learning path cards for major course categories.
+- Professional growth and creator feature sections.
+- Creator call-to-action banner.
+- Community testimonials and responsive footer.
+
+### Course Discovery
+
+- Dedicated `/courses` route.
+- Search courses by title or creator.
+- Filter courses by category.
+- Responsive course card grid.
+- Pagination for the course collection.
+- Empty-state handling when a filter has no matching courses.
+
+### Creator Profile
+
+- Dedicated `/creators` route.
+- Creator profile header with avatar, role, bio, product count, and follower count.
+- Follow button interaction.
+- Creator course filtering and responsive course grid.
+
+### Course Details
+
+- Dynamic `/courses/[courseId]` route with invalid-course handling.
+- Full-width course header with metadata and preview media.
+- Responsive two-column desktop layout with course content on the left and enrollment information on the right.
+- About, Lessons, and Reviews tabs.
+- About tab with description, sneak peek gallery, and key points.
+- Lessons tab with module list, lesson content, and progress tracking panel.
+- Reviews tab with rating breakdown, rating filters, reviewer cards, timestamps, and reviewer images.
+- Responsive layout checked across mobile, tablet, and desktop widths.
+
+## Tech Stack
+
+- Next.js `16.3.7` with the App Router
+- React `19.2.8`
+- TypeScript
+- Tailwind CSS `4`
+- Base UI and shadcn components
+- Lucide React icons
+- `next/image` for optimized image rendering
+- pnpm `10.28.1`
+
+## Project Structure
+
+```text
+src/
+├── app/                    # App Router pages and global styles
+├── components/
+│   ├── layout/             # Navbar, footer, and container
+│   ├── sections/           # Landing page sections
+│   └── ui/                 # Reusable UI components
+├── data/                   # Course, creator, navigation, and section data
+├── lib/                    # Shared utilities
+└── types/                  # Shared TypeScript types
+
+public/assets/              # Product, course, creator, and reviewer imagery
+```
+
+## Routes
+
+| Route | Description |
+| --- | --- |
+| `/` | ByteSpace landing page |
+| `/courses` | Searchable and filterable course library |
+| `/courses/[courseId]` | Course overview, lessons, and reviews |
+| `/creators` | Creator profile and course collection |
 
 ## Getting Started
 
-First, run the development server:
+From the `client` directory, install dependencies and start the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validation Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm lint
+pnpm exec tsc --noEmit
+pnpm build
+```
 
-## Learn More
+There is currently no test runner configured. ESLint, TypeScript validation, production builds, and browser-based responsive checks are used to validate the implemented experience.
 
-To learn more about Next.js, take a look at the following resources:
+## Design Direction
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The interface uses ByteSpace's primary blue, accent lime, dark heading, muted body, and subtle border tokens. Layouts are built with responsive Tailwind utilities, reusable content components, optimized local assets, accessible labels, and route-aware navigation states.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Current Scope
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This repository focuses on the front-end product experience with local data. Authentication, payments, enrollment processing, video playback, persistent reviews, and backend APIs are not connected yet.
