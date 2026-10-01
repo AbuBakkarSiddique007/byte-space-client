@@ -8,7 +8,7 @@ import type {
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
-  { label: "Creators", href: "#creators" },
+  { label: "Creators", href: "/creators" },
 ];
 
 export const footerColumns: FooterColumn[] = [
