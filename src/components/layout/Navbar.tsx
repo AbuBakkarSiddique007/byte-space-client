@@ -11,7 +11,7 @@ export function Navbar() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-12 lg:px-20">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <nav
           className="flex h-20 items-center justify-between sm:h-28"
           aria-label="Main navigation"
