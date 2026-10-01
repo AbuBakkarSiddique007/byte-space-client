@@ -3,11 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, ShoppingBag, X } from "lucide-react";
 import { navLinks } from "@/data";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActiveLink = (href: string) =>
+    href === "/" ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -30,20 +35,24 @@ export function Navbar() {
           </Link>
 
           <ul className="hidden items-center gap-9 md:flex">
-            {navLinks.map((link, index) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={
-                    index === 0
-                      ? "text-base font-medium text-white transition-colors"
-                      : "text-base font-normal text-white/80 transition-colors duration-200 hover:text-white"
-                  }
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = isActiveLink(link.href);
+
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`inline-flex items-center rounded-full border px-4 py-2 text-sm transition-all duration-200 ${isActive
+                      ? "border-white/20 bg-white/15 font-semibold text-white shadow-sm"
+                      : "border-transparent font-normal text-white/75 hover:border-white/10 hover:bg-white/10 hover:text-white"
+                      }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <div className="flex items-center gap-4 sm:gap-7">
@@ -98,20 +107,28 @@ export function Navbar() {
             id="mobile-navigation"
             aria-hidden={!isMenuOpen}
             className={`absolute inset-x-4 top-20 z-[60] flex flex-col gap-2 rounded-2xl border border-white/15 bg-primary-blue p-4 shadow-2xl transition-all duration-300 ease-out md:hidden ${isMenuOpen
-                ? "translate-y-0 opacity-100"
-                : "pointer-events-none -translate-y-3 opacity-0"
+              ? "translate-y-0 opacity-100"
+              : "pointer-events-none -translate-y-3 opacity-0"
               }`}
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-white transition-colors hover:bg-white/10"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = isActiveLink(link.href);
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`rounded-xl border px-3 py-3 text-base transition-colors ${isActive
+                    ? "border-white/20 bg-white/15 font-semibold text-white"
+                    : "border-transparent font-medium text-white/80 hover:border-white/10 hover:bg-white/10 hover:text-white"
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
               href="#"
               onClick={() => setIsMenuOpen(false)}
