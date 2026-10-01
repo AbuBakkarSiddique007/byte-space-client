@@ -7,6 +7,7 @@
 @theme {
   --color-primary-blue: #004BFE;
   --color-primary-blue-hover: #003ECC;
+  --color-cta-blue: #003BE2;
   --color-accent-lime: #CBFE00;
   --color-accent-lime-hover: #B8E600;
   --color-dark-heading: #0B0F19;
@@ -20,12 +21,66 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Subtle blueprint grid for Hero & CTA */
 .bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
   background-size: 80px 80px;
 }
+
+.bg-feature-wash {
+  background:
+    radial-gradient(circle at 8% 30%, rgb(203 254 0 / 0.24), transparent 32%),
+    radial-gradient(circle at 92% 72%, rgb(0 75 254 / 0.16), transparent 38%),
+    #ffffff;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float 4s ease-in-out infinite 1s;
+}
+
+.animate-float-fast {
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 
 @theme inline {
   --font-heading: var(--font-sans);
@@ -143,9 +198,11 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
