@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Star, BookOpen, Clock, MessageCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { categories } from "@/data";
@@ -29,105 +30,107 @@ export function CourseCard({ course, className }: CourseCardProps) {
     thumbnailGradients[course.category] ?? thumbnailGradients["ui-ux-design"];
 
   return (
-    <article
-      className={cn(
-        "group flex flex-col rounded-3xl border border-border-subtle bg-white overflow-hidden",
-        "shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300",
-        className
-      )}
-    >
-      <div className="relative h-44 w-full overflow-hidden bg-surface-gray">
-        {course.imageThumbnail ? (
-          <Image
-            src={course.imageThumbnail}
-            alt={course.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        ) : (
-          <div className={cn("absolute inset-0 bg-linear-to-br", gradient)}>
-            <span
-              aria-hidden
-              className="absolute -right-2 -bottom-8 text-[7rem] leading-none font-extrabold text-white/20 select-none"
-            >
-              {course.title.charAt(0).toUpperCase()}
-            </span>
-            <span className="absolute top-4 left-4 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-white">
-              {categoryName}
-            </span>
-          </div>
+    <Link href={`/courses/${course.id}`} className="block h-full">
+      <article
+        className={cn(
+          "group flex h-full flex-col overflow-hidden rounded-3xl border border-border-subtle bg-white",
+          "shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
+          className,
         )}
+      >
+        <div className="relative h-44 w-full overflow-hidden bg-surface-gray">
+          {course.imageThumbnail ? (
+            <Image
+              src={course.imageThumbnail}
+              alt={course.title}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          ) : (
+            <div className={cn("absolute inset-0 bg-linear-to-br", gradient)}>
+              <span
+                aria-hidden
+                className="absolute -right-2 -bottom-8 text-[7rem] leading-none font-extrabold text-white/20 select-none"
+              >
+                {course.title.charAt(0).toUpperCase()}
+              </span>
+              <span className="absolute top-4 left-4 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-white">
+                {categoryName}
+              </span>
+            </div>
+          )}
 
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-black/35 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-black/35 to-transparent" />
 
-        <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1.5">
-          <span className={metaPillClass}>
-            <BookOpen className="h-3 w-3" />
-            {course.lessonsCount} Lessons
-          </span>
-          <span className={metaPillClass}>
-            <Clock className="h-3 w-3" />
-            {course.duration}
-          </span>
-          <span className={metaPillClass}>
-            <MessageCircle className="h-3 w-3" />
-            {course.commentsCount}
-          </span>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-3 p-4 flex-1">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="text-base font-bold leading-snug text-dark-heading line-clamp-2 flex-1">
-            {course.title}
-          </h3>
-          <div className="flex items-center gap-1 shrink-0">
-            <span className="text-sm font-semibold text-dark-heading">
-              {course.rating.toFixed(1)}
+          <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1.5">
+            <span className={metaPillClass}>
+              <BookOpen className="h-3 w-3" />
+              {course.lessonsCount} Lessons
             </span>
-            <Star className="h-3.5 w-3.5 fill-[#CED0D3] text-[#CED0D3]" />
+            <span className={metaPillClass}>
+              <Clock className="h-3 w-3" />
+              {course.duration}
+            </span>
+            <span className={metaPillClass}>
+              <MessageCircle className="h-3 w-3" />
+              {course.commentsCount}
+            </span>
           </div>
         </div>
 
-        <p className="text-xs text-muted-body">
-          by{" "}
-          <span className="font-medium text-[#003BE2]">{course.author.name}</span>
-        </p>
+        <div className="flex flex-col gap-3 p-4 flex-1">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="text-base font-bold leading-snug text-dark-heading line-clamp-2 flex-1">
+              {course.title}
+            </h3>
+            <div className="flex items-center gap-1 shrink-0">
+              <span className="text-sm font-semibold text-dark-heading">
+                {course.rating.toFixed(1)}
+              </span>
+              <Star className="h-3.5 w-3.5 fill-[#CED0D3] text-[#CED0D3]" />
+            </div>
+          </div>
 
-        <div className="flex items-center gap-2.5 mt-auto">
-          <Badge
-            variant="secondary"
-            className="rounded-full bg-surface-gray text-muted-body text-xs font-semibold px-3 py-1"
-          >
+          <p className="text-xs text-muted-body">
+            by{" "}
+            <span className="font-medium text-[#003BE2]">{course.author.name}</span>
+          </p>
+
+          <div className="flex items-center gap-2.5 mt-auto">
+            <Badge
+              variant="secondary"
+              className="rounded-full bg-surface-gray text-muted-body text-xs font-semibold px-3 py-1"
+            >
+              <Image
+                src="/assets/level.png"
+                alt=""
+                width={13}
+                height={14}
+                className="h-3 w-auto"
+              />
+              {course.level}
+            </Badge>
+
             <Image
-              src="/assets/level.png"
-              alt=""
-              width={13}
-              height={14}
-              className="h-3 w-auto"
+              src="/assets/Auto Layout Horizontal.png"
+              alt="Enrolled students"
+              width={128}
+              height={32}
+              className="h-8 w-auto"
             />
-            {course.level}
-          </Badge>
+          </div>
 
-          <Image
-            src="/assets/Auto Layout Horizontal.png"
-            alt="Enrolled students"
-            width={128}
-            height={32}
-            className="h-8 w-auto"
-          />
+          <div className="h-px bg-border-subtle" />
+
+          <div className="flex items-baseline gap-1">
+            <span className="text-xl font-bold text-primary-blue">
+              ${course.price}
+            </span>
+            <span className="text-sm text-muted-body">/{course.billingType}</span>
+          </div>
         </div>
-
-        <div className="h-px bg-border-subtle" />
-
-        <div className="flex items-baseline gap-1">
-          <span className="text-xl font-bold text-primary-blue">
-            ${course.price}
-          </span>
-          <span className="text-sm text-muted-body">/{course.billingType}</span>
-        </div>
-      </div>
-    </article>
+      </article>
+    </Link>
   );
 }
