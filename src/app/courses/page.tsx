@@ -72,7 +72,7 @@ export default function CoursesPage() {
                         className="mt-8 flex w-full max-w-[624px] flex-col gap-3 sm:flex-row sm:items-center"
                         onSubmit={(event) => event.preventDefault()}
                     >
-                        <label className="flex h-[52px] min-w-0 flex-1 items-center gap-3 rounded-full bg-white px-6 text-left shadow-md">
+                        <label className="flex h-[52px] w-full min-w-0 flex-none items-center gap-3 rounded-full bg-white px-5 text-left shadow-md sm:w-auto sm:flex-1 sm:px-6">
                             <Search className="h-5 w-5 shrink-0 text-muted-body" />
                             <span className="sr-only">Search courses</span>
                             <input
@@ -84,7 +84,7 @@ export default function CoursesPage() {
                             />
                         </label>
 
-                        <label className="relative flex h-[52px] shrink-0 items-center rounded-full bg-accent-lime text-dark-heading shadow-md sm:w-[146px]">
+                        <label className="relative flex h-[52px] w-full shrink-0 items-center rounded-full bg-accent-lime text-dark-heading shadow-md sm:w-[146px]">
                             <span className="sr-only">Filter by category</span>
                             <select
                                 value={category}
@@ -106,25 +106,25 @@ export default function CoursesPage() {
 
             <section className="flex-1 py-14 sm:py-20">
                 <Container>
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-y border-border-subtle py-3">
-                        <div className="flex flex-wrap items-center gap-3">
+                    <div className="grid grid-cols-2 gap-2 border-y border-border-subtle py-3 sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-3">
+                        <div className="contents sm:flex sm:flex-wrap sm:items-center sm:gap-3">
                             <button
                                 type="button"
-                                className="inline-flex h-12 items-center gap-2 rounded-full border border-border-subtle bg-white px-5 text-sm font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray"
+                                className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-border-subtle bg-white px-3 text-xs font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray sm:h-12 sm:px-5 sm:text-sm"
                             >
                                 <Filter className="h-4 w-4" />
                                 Filter
                             </button>
                             <button
                                 type="button"
-                                className="inline-flex h-12 items-center gap-2 rounded-full border border-border-subtle bg-white px-5 text-sm font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray"
+                                className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-border-subtle bg-white px-3 text-xs font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray sm:h-12 sm:px-5 sm:text-sm"
                             >
                                 <BarChart3 className="h-4 w-4" />
                                 Level
                             </button>
                             <button
                                 type="button"
-                                className="inline-flex h-12 items-center gap-2 rounded-full border border-border-subtle bg-white px-5 text-sm font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray"
+                                className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-border-subtle bg-white px-3 text-xs font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray sm:h-12 sm:px-5 sm:text-sm"
                             >
                                 <Shapes className="h-4 w-4" />
                                 Category
@@ -132,7 +132,7 @@ export default function CoursesPage() {
                         </div>
                         <button
                             type="button"
-                            className="inline-flex h-12 items-center gap-2 rounded-full border border-border-subtle bg-white px-5 text-sm font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray"
+                            className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-border-subtle bg-white px-3 text-xs font-medium text-dark-heading shadow-sm transition-colors hover:bg-surface-gray sm:h-12 sm:px-5 sm:text-sm"
                         >
                             <ListFilter className="h-4 w-4" />
                             Most relevant
